@@ -15,14 +15,14 @@
 <h2>comments:</h2>
 
 <div id="comments_add">
-<%= link_to "Comments", post_comments_path(@post) %> 
+<%= link_to "Comments", post_comments_path(@post), :remote => true %> 
 </div>
 
 
 <br />
 
-<h2>Add a comment:</h2>
-<%= render "comments/form" %>
+
+<%#= render "comments/form" %>
  
 <br />
 

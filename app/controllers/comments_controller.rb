@@ -1,20 +1,22 @@
 class CommentsController < ApplicationController
+def new
+    @post = Post.find(params[:post_id])
+    @comment =Comment.new
+end
   def create
     @post = Post.find(params[:post_id])
-    @comment = @post.comments.create!(params[:comment])
-    @comments = @post.comments
-    respond_to do |format|
-    	format.html {redirect_to @post}
-	format.js
-     end
+    if  @post.comments.create!(params[:comment])
+   		redirect_to (posts_path)
+	else
+		render :action => "new"
+	end
+
+    
 end
 def index
 @post = Post.find(params[:post_id])
 @comment=@post.comments
-respond_to do |format|
-    	format.html {redirect_to @post}
-	format.js
-     end
+
 end
 def destroy
 	@post = Post.find(params[:post_id])
@@ -22,7 +24,7 @@ def destroy
 	@comment.destroy
 	 respond_to do |format|
     	format.html {redirect_to @post}
-	format.js { render :layout=>false }
+	
 
      end	
 end
