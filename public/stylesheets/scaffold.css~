@@ -7,20 +7,21 @@ body, p, ol, ul {
   text-align: center;
   
 }
-#cen {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
-  line-height: 18px;
-text-align: center;
-  
-  
-}
+
 #one {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
  text-align: right;
 
+  
+}
+#cen {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+text-align: center;
+  
   
 }
 div.hr {
@@ -30,6 +31,8 @@ div.hr {
 div.hr1 {
  background: violet;
 	height: 1px;
+	width: 950px;
+	align: center
 }
 
 th {

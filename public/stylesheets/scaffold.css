@@ -31,6 +31,8 @@ div.hr {
 div.hr1 {
  background: violet;
 	height: 1px;
+	width: 800px;
+	align: center
 }
 
 th {
