@@ -1,15 +1,35 @@
 body { background-color: #fff; color: #333; }
 
-body, p, ol, ul, td {
+body, p, ol, ul {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
   text-align: center;
   
 }
+#cen {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+text-align: center;
+  
+  
+}
+#one {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+ text-align: right;
+
+  
+}
 div.hr {
  background: #00FFFF;
 	height: 5px;
+}
+div.hr1 {
+ background: violet;
+	height: 1px;
 }
 
 th {
@@ -17,7 +37,9 @@ th {
 }
 
 h1{
-	color: red
+	color: red;
+	
+	
 }
 
 pre {
@@ -27,8 +49,8 @@ pre {
   text-align: center;
 }
 
-a { color: violet; }
-a:visited { color: violet; }
+a { color: orange; }
+a:visited { color: orange; }
 a:hover { color: yellow; background-color:#000; }
 
 div.field, div.actions {
@@ -56,7 +78,7 @@ div.field, div.actions {
   margin-bottom: 20px;
   background-color: #f0f0f0;
 text-align: center;
-align :center
+
 }
 
 #error_explanation h2 {
