@@ -1,16 +1,13 @@
 <h1><%= @post.title %></h1>
 <center>
-<table width="700px">
-
-<% @post.comments.each do |comment| %>
-<tr><td width="700px"><div class="hr1">
+<table width="100px">
+<tr><td colspan="2"><div class="hr1">
 <br />
 </div></td></tr>
-    <tr><td width="300px" align="center"><%= comment.comment %>
-</td>
-<td align="right"><%= comment.created_at.strftime("%Y-%m-%d") %></td>
-  </tr>
-<tr><td width="700px"><div class="hr1">
+<% @post.comments.each do |comment| %>
+
+    <tr><td align="center" width="300px"><%= comment.comment %> </td><td  width="100px">  <%= comment.created_at.strftime("%Y-%m-%d") %></td></tr>
+<tr><td colspan="2"><div class="hr1">
 <br />
 </div></td></tr>
 <% end %>
