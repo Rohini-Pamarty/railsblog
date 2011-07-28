@@ -1,5 +1,9 @@
 Blog::Application.routes.draw do
 
+  devise_for :admins
+
+  devise_for :users
+
   resources :tags
 
   resources :posts do

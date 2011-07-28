@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+before_filter :authenticate_user!, :only => [:new, :create]
   # GET /posts
   # GET /posts.xml
   def index

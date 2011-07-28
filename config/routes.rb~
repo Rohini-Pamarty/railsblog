@@ -1,5 +1,10 @@
 Blog::Application.routes.draw do
 
+  devise_for :users, :path_names => { :sign_in => "user/sessions"} do
+ get "sign_out", :to => "sessions#destroy"  
+end
+resources :users
+
   resources :tags
 
   resources :posts do
