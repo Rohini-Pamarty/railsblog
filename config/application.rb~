@@ -34,8 +34,7 @@ module Blog
     # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
 
     # Configure the default encoding used in templates for Ruby 1.9.
-config.action_mailer.default_url_options = { :host => 'localhost:
-3000' }
+config.action_mailer.default_url_options = { :host => 'posts.heroku.com' }
   config.action_mailer.delivery_method = :smtp
  
 
