@@ -1,3 +1,6 @@
+<% content_for :script do %>
+<% "WELCOME" %>
+<% end %>
 <h1>Posts</h1>
 <center>
 <br/>
@@ -11,7 +14,7 @@
 </div></td></tr>
 
 
-    <tr><td align="center" width="800px"><%= link_to  post.title, post %> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= post.created_at.strftime("%Y-%m-%d") %> &nbsp &nbsp </td></tr>
+    <tr><td align="center" width="800px"><%= link_to  post.title, post %> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= post.created_at.strftime("%Y-%m-%d") %> &nbsp &nbsp 
 
 <table align="right">
 <% if post.comments.count != 0 %>
@@ -20,6 +23,7 @@
 <% else %>
 	<tr ><td align="right"><%=link_to 'Add comments', new_post_comment_path(:post_id => post.id) %></td></tr>
 <% end %>
+</table>
 </td></tr>
 <tr><td><div class="hr1">
 <br />

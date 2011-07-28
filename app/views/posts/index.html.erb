@@ -1,3 +1,12 @@
+<% if user_signed_in? %>
+	<% content_for :script do %>
+		<%  current_user.email %>
+	<% end %>
+<% else %>
+	<% content_for :script do %>
+		<% "WELCOME" %>
+	<% end %>
+<% end %>
 <h1>Posts</h1>
 <center>
 <br/>
