@@ -2,7 +2,7 @@
   <div id="new">
 <div  style="float: left; width: 400px;"><%= comment.comment %> </div>
 <div style="float: left; width: 100px;">Posted by <%= comment.commentor %></div><br />
-  </div><br />
+  </div>
 
 
 

@@ -3,21 +3,15 @@
 <div id="user_nav">
 
   <% if user_signed_in? %>
-	<% content_for :script do %>
-		<% "WELCOME " + current_user.email %>
-	<% end %>
 	<% if current_user.email == "pvr@yahoo.com" %>
-		<% current_user.update_attribute :admi, true %>
+		<% current_user.update_attribute :admin, true %>
 	<% end %>
-	<%if  current_user.admi? %>
+	<%if  current_user.admin? %>
 		<%= "ADMIN" %>
 	<% end %>
 	Signed in as <%= current_user.email %>. Not you?
     	<%= link_to "Sign out", destroy_user_session_path%>
   <% else %>
-	<% content_for :script do %>
-		<% "WELCOME" + GUEST %>
-	<% end %>
     <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
   <% end %>
 </div>

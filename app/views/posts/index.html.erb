@@ -7,40 +7,21 @@
 		<% "WELCOME" %>
 	<% end %>
 <% end %>
-<h1>Posts</h1>
-<center>
-<br/>
-<br/>
 
-<tr><td><div class="hr1">
-<br />
-</div></td></tr>
+
+
 <% @posts.each do |post| %>
- <table>
-
-
-
-    <tr><td align="center" width="300px"><%= link_to  post.title, post %> </td><td  width="100px">  <%= post.created_at.strftime("%Y-%m-%d") %></td><td  width="300px"> &nbsp &nbsp 
-
-<table align="right">
-<% if post.comments.count != 0 %>
-
-	<tr><td align="right"><%= link_to 'Show comments', post_comments_path(:post_id => post.id, :post => post, :method => :get) %></td></tr>
-<% else %>
-	<tr ><td align="right"><%=link_to 'Add comments', new_post_comment_path(:post_id => post.id) %></td></tr>
-<% end %>
-</table>
-</td></tr>
-
-</table>
-<tr><td colspan="4"><div class="hr1">
-<br />
-</div></td></tr>
-</table>
+ <div class="post">
+						<h2 class="title"><%= link_to "#{post.title}", post %></h2>
+						<p class="meta"><span class="date"><%= post.created_at.strftime("%b %d, %Y") %> </span><span class="posted">Posted by Admin <%= post.post_by %></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+							<p><%= post.body %></p>
+							<p class="links"><%= link_to "Read More", post %>  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'Comments', post_comments_path(:post_id => post.id, :post => post, :method => :get) %> (<%= post.comments.count %>)</p>
+						</div>
+		</div>
 <% end %>
 
-</center>
 
-<br />
 
-<%= link_to 'New Post', new_post_path %>
+

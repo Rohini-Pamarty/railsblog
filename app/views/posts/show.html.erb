@@ -1,44 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<center>
-<table>
-  <tr><td colspan="2" align="center" width="600px"><h2><%= @post.title %></h2></tr>
-<tr><td width="600px"></td><td width="200px"align="right"><%= @post.created_at.strftime("%Y-%m-%d") %></td></tr>
-</table>
-
-<br />
-<table align="center">
-<div class="hr1">
-<br />
-</div></td></tr>
-</table>
-
-
-  <%= @post.body %>
-<br /><br /><br />
-</p>
-<table align="center">
-<div class="hr1">
-<br />
-</div></td></tr>
-</table>
-</center>
-
-
-
-<h2>comments:</h2>
+<div class="post">
+						<h2 class="title"><%= @post.title %></h2>
+						<p class="meta"><span class="date"><%= @post.created_at.strftime("%b %d, %Y") %> </span><span class="posted">Posted by Admin <%= @post.post_by %></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+<p><%= @post.body %></p>
 
 <div id="comments_add">
-<%= link_to "Comments", post_comments_path(@post), :remote => true %> 
-</div>
+<%= link_to "View Previous Comments", post_comments_path(@post), :remote => true %> <br /><br />
+</div><br/><br/><div style="clear: both;">&nbsp;</div>
 
 
+							
+						
+	<%= render "comments/form" %><br/>
 <br />
-
-
-<%#= render "comments/form" %>
  
-<br />
-
-
-<%= link_to 'Back', posts_path %>
+<p class="links"><%= link_to "Back", posts_path %> </p>
+</div>
+		</div>

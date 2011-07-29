@@ -46,6 +46,7 @@ before_filter :authenticate_user!, :only => [:new, :create]
   # POST /posts.xml
   def create
     @post = Post.new(params[:post])
+    @post.post_by=current_user.email
 
     respond_to do |format|
       if @post.save
